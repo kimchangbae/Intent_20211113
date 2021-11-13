@@ -7,6 +7,9 @@ import android.view.View
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
+    // 멤버변수
+    val REQ_FOR_NICKNAME = 1000
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -30,7 +33,8 @@ class MainActivity : AppCompatActivity() {
         }
 
         btnEditNickname.setOnClickListener {
-
+            val intent = Intent(this,EditNicknameActivity::class.java)
+            startActivityForResult(intent, REQ_FOR_NICKNAME)
         }
     }
 
