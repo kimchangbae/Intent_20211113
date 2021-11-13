@@ -11,6 +11,7 @@
     tools:context=".ViewMessageActivity">
 
     <TextView
+        android:id="@+id/txtMessage"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="메인에서 전송받은 문구 표시할 자리"
