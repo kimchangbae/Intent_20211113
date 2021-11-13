@@ -28,6 +28,10 @@ class MainActivity : AppCompatActivity() {
             startActivity(myIntent)
 
         }
+
+        btnEditNickname.setOnClickListener {
+
+        }
     }
 
 
