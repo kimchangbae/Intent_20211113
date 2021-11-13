@@ -13,6 +13,7 @@ class MainActivity : AppCompatActivity() {
         btnMoveToOther.setOnClickListener {
             val myIntent = Intent(this, SubActivity::class.java)
             startActivity(myIntent)
+            finish()
         }
     }
 }
