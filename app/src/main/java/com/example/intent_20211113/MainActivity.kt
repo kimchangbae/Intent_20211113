@@ -48,6 +48,16 @@ class MainActivity : AppCompatActivity() {
             startActivity(myIntent)
 
         }
+
+        btnCall.setOnClickListener {
+//            입력한 전화번호? 추출 (변수에 저장)
+            val inputPhoneNum = edtPhoneNum.text.toString()
+
+//            그 전화번호에 실제 전화 연결 (DIAL)
+            val myUri = Uri.parse("tel:${inputPhoneNum}")
+            val myIntent = Intent(Intent.ACTION_CALL, myUri)
+            startActivity(myIntent)
+        }
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
