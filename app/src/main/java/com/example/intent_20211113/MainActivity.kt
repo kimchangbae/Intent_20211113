@@ -38,5 +38,25 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+
+//      requestCode : 어떤 것을 가지러 다녀온건지 알려주는 숫자가 기록됨
+
+        if(requestCode == REQ_FOR_NICKNAME) {
+//          닉네임을 가지러 다녀왔을 때 실행됨
+
+//          resultCode : 확인(OK) / 취소(CANCEL) 중 어떤것을 눌렀는지 알려줌
+            if(resultCode == RESULT_OK) {
+
+//              닉네임을 가지러가서 확인도 누른게 맞을 때 실행되는 코드
+//              data : 이전 화면에서 담아준 resultIntent를 들고 있는 역할
+
+                val newNickname = data?.getStringExtra("nick")
+                txtNickname.text = newNickname
+            }
+        }
+    }
+
 
 }
