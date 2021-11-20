@@ -36,6 +36,13 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this,EditNicknameActivity::class.java)
             startActivityForResult(intent, REQ_FOR_NICKNAME)
         }
+
+        btnDial.setOnClickListener {
+//            입력한 전화번호? 추출 (변수에 저장)
+//            그 전화번호에 실제 전화 연결 (DIAL)
+
+
+        }
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
@@ -43,11 +50,11 @@ class MainActivity : AppCompatActivity() {
 
 //      requestCode : 어떤 것을 가지러 다녀온건지 알려주는 숫자가 기록됨
 
-        if(requestCode == REQ_FOR_NICKNAME) {
+        if (requestCode == REQ_FOR_NICKNAME) {
 //          닉네임을 가지러 다녀왔을 때 실행됨
 
 //          resultCode : 확인(OK) / 취소(CANCEL) 중 어떤것을 눌렀는지 알려줌
-            if(resultCode == RESULT_OK) {
+            if (resultCode == RESULT_OK) {
 
 //              닉네임을 가지러가서 확인도 누른게 맞을 때 실행되는 코드
 //              data : 이전 화면에서 담아준 resultIntent를 들고 있는 역할
